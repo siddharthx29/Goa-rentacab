@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Rent-A-Cab</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <style> /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ff9800;
+        }
+        
+  
+        .navbar .logo {
+      font-size: 24px;
+      color: white;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      background-color: #e67e00;
+      border-radius: 5px;
+    }
+
+        
+        .hero {
+            background-image: url('goa2.jpg');
+            background-size: cover;
+            color: rgba(51, 216, 216, 0.781);
+            text-align: center;
+            padding: 50px 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+        }
+        
+        .zoom-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #1636c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 50px;
+    }
+
+    .zoom-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 100px;
+    }
+        
+        .cars {
+            padding: 20px;
+
+        }
+        
+        .cars h2 {
+            text-align: center;
+        }
+        
+        .car-gallery {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .car-card {
+            margin: 2px;
+        }
+        
+        .car-card img {
+            width: 500px;
+            border-radius: 10px;
+        }
+        
+
+        .redirect-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #12c6e6;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .redirect-button:hover {
+      transform: scale(1.1);
+      background-color: #015cbe;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+     
+
+        
+        
+   
+        
+        /* Footer */
+        .footer {
+            background-color: #333333;
+        }
+        .footer p{
+        color:white;
+    text-align: left;}
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      border: #000000;
+      border-radius: 7%;
+    }
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .carousel-slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+    }
+
+    .dot {
+      height: 14px;
+      width: 14px;
+      background-color: #ffffffaa;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #fff;
+      border: 2px solid #000;
+    }
+
+    .overlay-text {
+      position: absolute;
+      bottom: 80px;
+      left: 50px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    @media (max-width: 768px) {
+      .overlay-text {
+        font-size: 1.2rem;
+        left: 20px;
+      }
+    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.achievement-section {
+    background-color: #f4f4f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.achievement-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.container {
+  display: flex; /* Use flexbox to position the image on the left */
+  align-items: center; /* Align items vertically to the center */
+  justify-content: flex-start; /* Align items horizontally to the left */
+}
+
+.image-wrapper {
+  overflow: hidden; /* Hide the part of the image that goes beyond the wrapper */
+  border: 10px solid #0a0606; /* Optional: Add a border */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Align items to the start (left) horizontally */
+  align-items: center; /* Align items to the start (top) vertically */
+  text-align: left;
+  margin-left: 0; /* Align wrapper to the left of the page */
+}
+
+
+.zoom-image {
+  width: 200px; /* Initial width of the image */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.zoom-image:hover {
+  transform: scale(1.2); /* Scale the image up on hover (adjust as needed) */
+}
+.image-container:hover img {
+    transform: scale(1.2);
+}
+
+.achievement-container h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.achievement-container p {
+    font-size: 18px;
+    color: #666;
+}
+
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slideshow-container {
+      max-width: 700px;
+      position: relative;
+      margin: 50px auto;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .slide h2 {
+      margin: 10px 0 5px;
+    }
+
+    .slide p {
+      color: #555;
+    }
+
+    .btn-group {
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 5px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    .call {
+      background-color: #007bff;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      user-select: none;
+      background: rgba(0,0,0,0.5);
+      border-radius: 0 5px 5px 0;
+      transform: translateY(-50%);
+    }
+
+    .next {
+      right: 0;
+      border-radius: 5px 0 0 5px;
+    }
+  </style>
+
+
+        </style>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Grab-A-Cab</div>
+        <nav>
+          <ul>
+            <li><a href="javascript:void(0);" onclick="redirectToHome()">Home</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToCars()">Cars</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToAbout()">About</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToContact()">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <div class="slideshow-container">
+
+        <div class="slide" style="display: block;">
+          <img src="swift.jpg" alt="Sedan">
+          <h2>Sedan Cab</h2>
+          <br>
+          <p>Comfortable for 4 people | AC | Daily Rate: ₹1200</p>
+          <br>
+          <div class="btn-group">
+            <a class="btn whatsapp" href="https://wa.me/919876543210?text=I'm%20interested%20in%20booking%20the%20Sedan%20cab" target="_blank">Buy via WhatsApp</a>
+            <a class="btn call" href="tel:9145615104">Call to Book</a>
+          </div>
+        </div>
+      
+        <div class="slide">
+          <img src="suv.jpg" alt="SUV">
+          <h2>SUV Cab</h2>
+          <br>
+          <p>Spacious for 6 people | AC | Daily Rate: ₹1800</p>
+          <br>
+          <div class="btn-group">
+            <a class="btn whatsapp" href="https://wa.me/919876543210?text=I'm%20interested%20in%20booking%20the%20SUV%20cab" target="_blank">Buy via WhatsApp</a>
+            <a class="btn call" href="tel:9145615104" >Call to Book</a>
+          </div>
+        </div>
+      
+        <div class="slide">
+          <img src="thar.jpg" alt="4X4">
+          <h2>4X4</h2>
+          <br>
+          <p>Perfect for family/group | 7 Seater | AC | Rate: ₹3000</p>
+          <br>
+          <div class="btn-group">
+            <a class="btn whatsapp" href="https://wa.me/919876543210?text=I'm%20interested%20in%20booking%20the%20Tempo%20Traveller" target="_blank">Buy via WhatsApp</a>
+            <a class="btn call" href="tel:9145615104">Call to Book</a>
+          </div>
+        </div>
+
+
+        <div class="slide">
+          <img src="Mercedes.jpg" alt="Luxury">
+          <h2>4X4</h2>
+          <br>
+          <p>Perfect for family/group | 7 Seater | AC | Rate: ₹5000</p>
+          <br>
+          <div class="btn-group">
+            <a class="btn whatsapp" href="https://wa.me/919876543210?text=I'm%20interested%20in%20booking%20the%20Tempo%20Traveller" target="_blank">Buy via WhatsApp</a>
+            <a class="btn call" href="tel:9145615104">Call to Book</a>
+          </div>
+        </div>
+      
+        <!-- Controls -->
+        <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a>
+      
+      </div>
+
+
+   
+
+
+
+
+
+
+   
+
+     
+   
+        
+
+    
+    
+    
+
+    
+
+    <!-- Footer -->
+    <footer class="footer" Style="color: aqua;">>
+        © 2025 Goa Rent-A-Cab | All Rights Reserved
+    </footer>
+   
+
+    <script>
+        function redirectToHome() {
+          window.location.href = "html.html"; // Replace with your actual file or URL
+        }
+      
+        function redirectToCars() {
+          window.location.href = "cars.html";
+        }
+      
+        function redirectToAbout() {
+          window.location.href = "about.html";
+        }
+      
+        function redirectToContact() {
+          window.location.href = "contact.html";
+        }
+      </script>
+<script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+  
+    function showSlide(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex = (n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }
+  
+    function changeSlide(n) {
+      showSlide(slideIndex + n);
+    }
+  
+    // Auto-slide (optional)
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000); // every 5 seconds
+  
+    // Initial call
+    showSlide(slideIndex);
+  </script>
+
+
+    
+    
+</body>
+
+
+
+
+
+</html>
+
+

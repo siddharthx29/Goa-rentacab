@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Rent-A-Cab</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <style> /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ff9800;
+        }
+        
+       
+    .navbar .logo {
+      font-size: 24px;
+      color: white;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      background-color: #e67e00;
+      border-radius: 5px;
+    }
+
+  
+        
+        .hero {
+            background-image: url('goa2.jpg');
+            background-size: cover;
+            color: rgba(51, 216, 216, 0.781);
+            text-align: center;
+            padding: 50px 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+        }
+        
+        .zoom-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #1636c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 50px;
+    }
+
+    .zoom-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 100px;
+    }
+        
+        .cars {
+            padding: 20px;
+
+        }
+        
+        .cars h2 {
+            text-align: center;
+        }
+        
+        .car-gallery {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .car-card {
+            margin: 2px;
+        }
+        
+        .car-card img {
+            width: 500px;
+            border-radius: 10px;
+        }
+        
+
+        .redirect-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #12c6e6;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .redirect-button:hover {
+      transform: scale(1.1);
+      background-color: #015cbe;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+     
+
+        
+        
+   
+        
+        /* Footer */
+        .footer {
+            background-color: #333333;
+        }
+        .footer p{
+        color:white;
+    text-align: left;}
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      border: #000000;
+      border-radius: 7%;
+    }
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .carousel-slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+    }
+
+    .dot {
+      height: 14px;
+      width: 14px;
+      background-color: #ffffffaa;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #fff;
+      border: 2px solid #000;
+    }
+
+    .overlay-text {
+      position: absolute;
+      bottom: 80px;
+      left: 50px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    @media (max-width: 768px) {
+      .overlay-text {
+        font-size: 1.2rem;
+        left: 20px;
+      }
+    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.achievement-section {
+    background-color: #f4f4f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.achievement-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.container {
+  display: flex; /* Use flexbox to position the image on the left */
+  align-items: center; /* Align items vertically to the center */
+  justify-content: flex-start; /* Align items horizontally to the left */
+}
+
+.image-wrapper {
+  overflow: hidden; /* Hide the part of the image that goes beyond the wrapper */
+  border: 10px solid #0a0606; /* Optional: Add a border */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Align items to the start (left) horizontally */
+  align-items: center; /* Align items to the start (top) vertically */
+  text-align: left;
+  margin-left: 0; /* Align wrapper to the left of the page */
+}
+
+
+.zoom-image {
+  width: 200px; /* Initial width of the image */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.zoom-image:hover {
+  transform: scale(1.2); /* Scale the image up on hover (adjust as needed) */
+}
+.image-container:hover img {
+    transform: scale(1.2);
+}
+
+.achievement-container h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.achievement-container p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+        </style>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Grab-A-Cab</div>
+        <nav>
+          <ul>
+            <li><a href="javascript:void(0);" onclick="redirectToHome()">Home</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToCars()">Cars</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToAbout()">About</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToContact()">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2 style="font-size: xx-large;">About Us</h2>
+    <p style="font-size: larger;">We are a premium car rental service based in Goa, offering reliable and affordable vehicles for your travel needs.</p>
+</section>
+
+<br> 
+<br>
+<br>
+<br>
+
+<title>Most Trusted Car Rental in Goa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="achievement-section">
+    
+    
+    <div class="achievement-container">
+        <h2>Most Trusted Car Rental in Goa</h2>
+        <p>We pride ourselves on being the most reliable car rental service in Goa, offering a wide range of vehicles for your travel needs.</p>
+    
+
+        
+            <div class="image-wrapper" style="margin: 50px;">
+              <img src="goa.jpg" alt="Zoomable Image" class="zoom-image">
+            </div>
+            <div>
+            
+              </div>
+          </div>
+    
+          
+     
+           
+        </div>
+
+            
+           
+        </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: left;">
+        <h1 style="margin: 10px; text-align: center;">Aman Deshmukh</h1>
+        <p style="margin:10px; text-align: center;"> This is a brand we can trust offered me an extra day with no extra charges i would recommend everyone to buy this</p>
+        <h2 style="margin: 10px; text-align: center; ">2024 Traveller</h2>
+    </div>
+</section>
+
+<body>
+    <section class="achievement-section">
+        
+        
+        <div class="achievement-container">
+           
+        
+    
+            
+                <div class="image-wrapper" style="margin: 50px;">
+                  <img src="king.jpg" alt="Zoomable Image" class="zoom-image">
+                </div>
+                <div>
+                
+                  </div>
+              </div>
+        
+              
+         
+               
+            </div>
+    
+                
+               
+            </div>
+        </div>
+    
+        <div style="display: flex; flex-direction: column; align-items: left;">
+            <h1 style="margin: 10px; text-align: center;">Siddharth & Family </h1>
+            <p style="margin:10px; text-align: center;"> When Siddharth planned a surprise Goa trip for his parents and little sister, he knew he wanted it to be relaxing, scenic, and full of laughter. No last-minute hassles, no getting lost—just pure coastal joy. And that’s exactly what they got, thanks to Grab-A-Cab.</p>
+            <h2 style="margin: 10px; text-align: center; ">2025 Traveller</h2>
+        </div>
+    </section>
+
+
+    <body>
+        <section class="achievement-section">
+            
+            
+            <div class="achievement-container">
+               
+            
+        
+                
+                    <div class="image-wrapper" style="margin: 50px;">
+                      <img src="murugan family.jpg" alt="Zoomable Image" class="zoom-image">
+                    </div>
+                    <div>
+                    
+                      </div>
+                  </div>
+            
+                  
+             
+                   
+                </div>
+        
+                    
+                   
+                </div>
+            </div>
+        
+            <div style="display: flex; flex-direction: column; align-items: left;">
+                <h1 style="margin: 10px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Murugan & Family </h1>
+                <p style="margin:10px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Murugan and his family had been dreaming of a trip to Goa for years. When they finally landed in this beachy paradise, they knew they wanted to explore every corner—from the golden sands to the vibrant markets. That’s when they booked a cab from Grab-A-Cab, and their journey truly began.
+
+                    As they hopped into their air-conditioned ride, their friendly driver welcomed them with a big Goan smile and a playlist of beach tunes. The car smelled of fresh coconuts, and Murugan's kids were already peeking out the windows in excitement.
+                    
+                    First stop? The stunning Calangute Beach, where the waves danced and the sun shimmered. They grabbed local snacks like prawn rava fry and sipped on fresh kokum juice while their cab patiently waited nearby.
+                    
+                    Next, they cruised through the narrow heritage lanes of Fontainhas, Goa’s Latin Quarter. Murugan’s wife, a history buff, couldn’t stop admiring the Portuguese architecture, and their driver even pointed out hidden gems most tourists miss.
+                    
+                    The cab then took them up to Chapora Fort—yes, the Dil Chahta Hai one! The panoramic view was breathtaking, and Murugan felt like a movie hero.
+                    
+                    Later that evening, they watched the sunset at Baga Beach, followed by a moonlit drive to a peaceful shack dinner, where the cab waited comfortably parked nearby, just a call away</p>
+                <h2 style="margin: 10px; text-align: center; ">2024 Traveller</h2>
+            </div>
+        </section>
+    
+
+
+
+
+
+
+      
+
+
+   
+
+
+
+
+
+
+   
+
+     
+   
+        
+
+    
+    
+    
+
+    
+
+    <!-- Footer -->
+    <footer class="footer" Style="color: aqua;">>
+        © 2025 Goa Rent-A-Cab | All Rights Reserved
+    </footer>
+   
+
+    <script>
+        function redirectToHome() {
+          window.location.href = "html.html"; // Replace with your actual file or URL
+        }
+      
+        function redirectToCars() {
+          window.location.href = "cars.html";
+        }
+      
+        function redirectToAbout() {
+          window.location.href = "about.html";
+        }
+      
+        function redirectToContact() {
+          window.location.href = "contact.html";
+        }
+      </script>
+    
+    
+</body>
+
+
+
+
+
+</html>
+
+
